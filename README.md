@@ -12,7 +12,7 @@ A photography e-commerce where clients can request photographers to come and tak
 
 ## Authentication
 
-Authentication is handled with Laravel Sanctum
+Authentication is handled with Laravel Sanctum, use Token received during login as Bearer to for subsequent requests
 
 ## How to set up
 
