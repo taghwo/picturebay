@@ -17,7 +17,7 @@ Authentication is handled with Laravel Sanctum, use Token received during login 
 ## How to set up
 
 ```sh
-## Minimum Server Requiremnt "php": 7.3,
+## Minimum Server Requiremnt "php": 7.4,
 1. Clone repository
 2. CD into project and run `composer install` to install dependencies
 3. Create .env file in project root and paste .env.example content into .env
