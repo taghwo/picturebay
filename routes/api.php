@@ -27,7 +27,7 @@ Route::prefix('v1')->group(function () {
         Route::post('register', [RegisteredUserController::class,'store']);
     });
     Route::ApiResource('products', ProductController::class)->middleware('auth:sanctum');
-    Route::ApiResource('photoshoots', PhotoShootController::class)->middleware('auth:sanctum');
+    Route::resource('photoshoots', PhotoShootController::class)->middleware('auth:sanctum');
     Route::post('photoshoots/{id}/status', [PhotoShootController::class,'updatePhotoStatus'])->middleware('auth:sanctum');
     Route::get('photoshoots/{id}/download', [PhotoShootController::class,'downloadHQFile'])->middleware('auth:sanctum');
     Route::get('photographrequests/me', [PhotographRequestController::class,'myrequest'])->middleware('auth:sanctum');

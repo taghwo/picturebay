@@ -34,10 +34,11 @@ class PhotoShootPolicy
      */
     public function store(User $user,$photographerrequest)
     {
-        if(!$user->id === $photographerrequest->photographer_id){
-            throw new UnauthorisedException('Sorry you don\'t have access to create a photoshoot collection for a request that was not assigned to you');
-        }
+        if($user->id === $photographerrequest->photographer_id){
         return Response::allow();
+        }
+        throw new UnauthorisedException('Sorry you don\'t have access to create a photoshoot collection for a request that was not assigned to you');
+
     }
 
     /**
@@ -63,7 +64,7 @@ class PhotoShootPolicy
      */
     public function status(User $user, PhotoShoot $photoShoot)
     {
-        if(!$user->id === $photoShoot->photographerrequest->product->user_id){
+        if($user->id !== $photoShoot->photographerrequest->product->user_id){
             throw new UnauthorisedException('Sorry only the request owner can update the status of this photo');
         }
         return Response::allow();
@@ -78,7 +79,7 @@ class PhotoShootPolicy
      */
     public function delete(User $user, PhotoShoot $photoShoot)
     {
-        if(!$user->id === $photoShoot->photographerrequest->photographer_id){
+        if($user->id !== $photoShoot->photographerrequest->photographer_id){
             throw new UnauthorisedException('Sorry you don\'t have access to delete this photoshoot collection');
         }
         return Response::allow();

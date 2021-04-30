@@ -30,7 +30,6 @@ class PhotoShootController extends Controller
     {
         $requestId = $request->get('request');
         $photoshoot = $this->photoShoot->withModels(['photographerrequest.product'])->findWhere('photographer_request_id', $requestId);
-        $this->authorize('view', $photoshoot);
         return $this->respondSuccessWithData($photoshoot);
     }
 
@@ -57,10 +56,12 @@ class PhotoShootController extends Controller
 
             $preparedData  = $this->fileUploadManager->put($photoShoot, $validatedAttr['images'], 'photoshoot_images');
 
-            $photoShoot = $this->photoShoot->createBulk($preparedData, 201);
+             $this->photoShoot->createBulk($preparedData, 201);
+
+            $lastInsert = $this->photoShoot->findFirstWhere(['name' => $preparedData[1]['name']]);
 
             \DB::commit();
-            return $this->respondSuccessWithData($preparedData);
+            return $this->respondSuccessWithData($lastInsert);
         } catch (\throwable $e) {
             \DB::rollback();
             return $this->respondErrorWithMessage($e->getMessage());

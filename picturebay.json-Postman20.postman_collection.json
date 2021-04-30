@@ -1,0 +1,1098 @@
+{
+  "info": {
+    "name": "photobay",
+    "_postman_id": "387fd76a-01ea-4369-a348-13b2adba3d26",
+    "description": "",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Product",
+      "description": "",
+      "item": [
+        {
+          "id": "28c706e6-6b08-4177-8229-352dbc36d99d",
+          "name": "Create Product",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "products"
+              ],
+              "port": "8000"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "name",
+                  "value": "All local grains",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "detail",
+                  "value": "Here and there",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "location",
+                  "value": "Lagos Nigeria",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "images[0]",
+                  "disabled": false,
+                  "type": "file",
+                  "description": ""
+                },
+                {
+                  "key": "images[1]",
+                  "disabled": false,
+                  "type": "file",
+                  "description": ""
+                },
+                {
+                  "key": "status",
+                  "value": "open",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "ec04e91b-3c86-40ba-99bf-b2c35c7761b1"
+            }
+          ]
+        },
+        {
+          "id": "14779fa4-69dd-463d-bbd3-0f02a89ed991",
+          "name": "GET Products",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "products"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "d7abfa7f-0469-4f44-8f66-37e181d73eae"
+            }
+          ]
+        },
+        {
+          "id": "1a910f6d-287d-4739-ab64-668b463fbcc3",
+          "name": "GET Product",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "products/c6c18282-0fe2-4e54-af5c-d8d1d4e94015"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "6d8fca39-2d49-478e-bd83-91b728fe0142"
+            }
+          ]
+        },
+        {
+          "id": "b3e84d37-4ae0-4d3b-8a7d-f46a97e53ebd",
+          "name": "DELETE Product",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "products/f112a87e-add2-47f7-b562-5cd7358de186"
+              ],
+              "port": "8000"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "1482ef25-c8a0-4cf6-8af1-6aefd9518efd"
+            }
+          ]
+        },
+        {
+          "id": "274e4b7e-1176-47fc-a847-2195d30d25d8",
+          "name": "Update Product",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "products/4f1f442d-fe41-489b-a589-2b60671712d1"
+              ],
+              "port": "8000"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "_method",
+                  "value": "PUT",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "name",
+                  "value": "New loaders",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "detail",
+                  "value": "many loaders",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "status",
+                  "value": "assigned",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "4ca0544a-d240-4717-ba1c-b95701f7578c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "description": "",
+      "item": [
+        {
+          "id": "3c9a2383-4688-40fa-98ff-38c38bcbfcc6",
+          "name": "Register",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "auth/register"
+              ],
+              "port": "8000"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "full_name",
+                  "value": "Taghwo Mills",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "email",
+                  "value": "taghwomills@gmail.com",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "role_id",
+                  "value": "1",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "password",
+                  "value": "taghwo01",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "password_confirmation",
+                  "value": "taghwo01",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "7127a8df-2c77-4ba0-8259-6e15f957a518"
+            }
+          ]
+        },
+        {
+          "id": "7182069f-f3d1-4a0e-a9a2-70936ab391e9",
+          "name": "Login",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "auth/login"
+              ],
+              "port": "8000"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "email",
+                  "value": "taghwomills@gmail.com",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "password",
+                  "value": "taghwo01",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "94affe9e-7b07-45dd-a914-8b7239693dc6"
+            }
+          ]
+        },
+        {
+          "id": "b08baf69-b31b-41fc-a247-8786e5ec8d19",
+          "name": "Logout",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "auth/logout"
+              ],
+              "port": "8000"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "3ec074ef-c79d-477b-b4a4-19e0466737d1"
+            }
+          ]
+        },
+        {
+          "id": "9cd0d68b-dc6b-4b3a-bfb8-c2e151a0071c",
+          "name": "Current User",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "auth/me"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "550b9e68-a1fe-419d-9524-b0834d11bc4c"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "PhotoShoots",
+      "description": "",
+      "item": [
+        {
+          "id": "7c77403a-f8b9-47bc-aed4-79d8dfe66df3",
+          "name": "Create PhotoShoot",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photoshoots"
+              ],
+              "port": "8000"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "photographer_request_id",
+                  "value": "10",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "images[0]",
+                  "disabled": false,
+                  "type": "file",
+                  "description": ""
+                },
+                {
+                  "key": "images[1]",
+                  "disabled": false,
+                  "type": "file",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "code": 200,
+              "name": "Response_200",
+              "id": "3fafdb52-f19f-4dfd-91c7-2db173e5611d"
+            }
+          ]
+        },
+        {
+          "id": "d17e9701-de20-4e30-b505-da3f4d8dddba",
+          "name": "Photo Status",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photoshoots/90/status"
+              ],
+              "port": "8000"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "cf8e13ad-c760-4e00-994b-dbf7876328dc"
+            }
+          ]
+        },
+        {
+          "id": "96dd3640-7a11-488b-8a66-c22e00c742fe",
+          "name": "Download HQ Image",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photoshoots/235/download"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "b11eac3e-d4a3-43b8-82f8-083d703ded7c"
+            }
+          ]
+        },
+        {
+          "id": "1ddef0a1-8ffe-4983-b3ce-cc290cc89d75",
+          "name": "GET Request Photoshoot",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photoshoots?request=1"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "f2820bf9-a005-413a-883d-f9dbbe1482a7"
+            }
+          ]
+        },
+        {
+          "id": "4a2740ce-f146-4264-9d71-8e37d46a9dd5",
+          "name": "GET Photoshoot",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photoshoots/80"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "a4d3263a-c0ae-4be1-b76d-4db790b780dc"
+            }
+          ]
+        },
+        {
+          "id": "a24296db-bf0d-4cf4-8b67-20ea7a4f2b10",
+          "name": "DELETE Single Photo",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photoshoots/3"
+              ],
+              "port": "8000"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "14f61044-26b5-4bad-ad29-cfbdc08354e2"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Photograph request",
+      "description": "",
+      "item": [
+        {
+          "id": "2259e1c7-711f-41c1-8ad0-b8d0f389e7b0",
+          "name": "Assign Request",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photographrequests"
+              ],
+              "port": "8000"
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "urlencoded",
+              "urlencoded": [
+                {
+                  "key": "product_id",
+                  "value": "3",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                },
+                {
+                  "key": "photographer_id",
+                  "value": "11",
+                  "disabled": false,
+                  "type": "text",
+                  "description": ""
+                }
+              ],
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "e7b78a68-7a94-404d-883d-a6b224c6eb15"
+            }
+          ]
+        },
+        {
+          "id": "82952bf9-84aa-48ce-93e3-d0eb467b4f4a",
+          "name": "GET Request",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photographrequests/2"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "c4dd4027-d904-43f9-8b69-8e5e6620a004"
+            }
+          ]
+        },
+        {
+          "id": "1461d471-b204-4a59-9bd9-0143735f7760",
+          "name": "GET All Requests",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photographrequests"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "019de2a6-d1e3-4ce1-a025-8114344cc40e"
+            }
+          ]
+        },
+        {
+          "id": "a9bebef5-96eb-441c-9ae3-b23d04881076",
+          "name": "DELETE Request",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photographrequests/2"
+              ],
+              "port": "8000"
+            },
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "1abb2292-60e5-4768-bd27-4cf6a14eda83"
+            }
+          ]
+        },
+        {
+          "id": "ccae875e-d054-4ace-9f15-f6c139f96236",
+          "name": "My requests",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photographrequests/me"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              },
+              {
+                "key": "Content-Type",
+                "value": "multipart/form-data",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "a43afade-c49c-4d42-bd9b-7f48b7bb5c65"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Users",
+      "description": "",
+      "item": [
+        {
+          "id": "4e493928-ce0a-4ff0-9b3c-029ff9aa0136",
+          "name": "GET Photographers",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "photographers"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "3c52bb90-9aa7-4787-b835-b6cf6c095f9f"
+            }
+          ]
+        },
+        {
+          "id": "70f749a7-2270-4d2a-abe1-4740356238cf",
+          "name": "GET Buyers",
+          "request": {
+            "url": {
+              "protocol": "http",
+              "host": "127.0.0.1",
+              "path": [
+                "api",
+                "v1",
+                "buyers"
+              ],
+              "port": "8000"
+            },
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json",
+                "description": "",
+                "disabled": false
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "disabled": false
+            },
+            "description": ""
+          },
+          "response": [
+            {
+              "header": [],
+              "code": 200,
+              "name": "Response_200",
+              "id": "5e6a3881-a167-4b45-9892-4c4349a42378"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "variable": [],
+  "auth": {
+    "type": "bearer",
+    "bearer": {
+      "token": "<<token>>",
+      "scope": ""
+    }
+  }
+}
